@@ -61,8 +61,8 @@ def test_read_all_summaries(test_app_with_db):
 
 def test_remove_summary(test_app_with_db):
     response = test_app_with_db.post(
-            "/summaries/", data=json.dumps({"url": "https://foo.bar"})
-            )
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
     summary_id = response.json()["id"]
 
     response = test_app_with_db.delete(f"/summaries/{summary_id}/")

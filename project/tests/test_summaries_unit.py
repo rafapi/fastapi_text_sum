@@ -48,6 +48,7 @@ def test_read_summary(test_app, monkeypatch):
     test_data = {
         "id": 1,
         "url": "https://foo.bar",
+        "title": "title",
         "summary": "summary",
         "created_at": datetime.utcnow().isoformat(),
     }
@@ -78,12 +79,14 @@ def test_read_all_summaries(test_app, monkeypatch):
         {
             "id": 1,
             "url": "https://foo.bar",
+            "title": "title",
             "summary": "summary",
             "created_at": datetime.utcnow().isoformat(),
         },
         {
             "id": 2,
             "url": "https://testdrivenn.io",
+            "title": "title",
             "summary": "summary",
             "created_at": datetime.utcnow().isoformat(),
         },
@@ -104,6 +107,7 @@ def test_remove_summary(test_app, monkeypatch):
         return {
             "id": 1,
             "url": "https://foo.bar",
+            "title": "title",
             "summary": "summary",
             "created_at": datetime.utcnow().isoformat(),
         }
@@ -116,8 +120,8 @@ def test_remove_summary(test_app, monkeypatch):
     monkeypatch.setattr(crud, "delete", mock_delete)
 
     response = test_app.delete("/summaries/1/")
-    assert response.status_code == 200
-    assert response.json() == {"id": 1, "url": "https://foo.bar"}
+    assert response.status_code == 204
+    assert response.json() == None
 
 
 def test_remove_summary_incorrect_id(test_app, monkeypatch):
@@ -136,6 +140,7 @@ def test_update_summary(test_app, monkeypatch):
     test_response_payload = {
         "id": 1,
         "url": "https://foo.bar",
+        "title": "title",
         "summary": "summary",
         "created_at": datetime.utcnow().isoformat(),
     }

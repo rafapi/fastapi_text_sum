@@ -41,7 +41,7 @@ async def read_all_summaries() -> List[SummarySchema]:
     return await crud.get_all()
 
 
-@router.delete("/{id}/", response_model=SummaryResponseSchema)
+@router.delete("/{id}/", status_code=204)
 async def delete_summary(id: int = Path(..., gt=0)) -> SummaryResponseSchema:
     summary = await crud.get(id)
     if not summary:
@@ -49,7 +49,7 @@ async def delete_summary(id: int = Path(..., gt=0)) -> SummaryResponseSchema:
 
     await crud.delete(id)
 
-    return summary
+    return None
 
 
 @router.put("/{id}/", response_model=SummarySchema)

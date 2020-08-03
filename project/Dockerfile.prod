@@ -3,7 +3,7 @@
 ###########
 
 # pull official base image
-FROM python:3.8.3-slim-buster as builder
+FROM python:3.8.5-slim-buster as builder
 
 # install system dependencies
 RUN apt-get update \
@@ -35,7 +35,7 @@ RUN isort ./**/*.py
 #########
 
 # pull official base image
-FROM python:3.8.3-slim-buster
+FROM python:3.8.5-slim-buster
 
 # create directory for the app user
 RUN mkdir -p /home/app

@@ -121,7 +121,7 @@ def test_remove_summary(test_app, monkeypatch):
 
     response = test_app.delete("/summaries/1/")
     assert response.status_code == 204
-    assert response.json() == None
+    assert response.json() is None
 
 
 def test_remove_summary_incorrect_id(test_app, monkeypatch):

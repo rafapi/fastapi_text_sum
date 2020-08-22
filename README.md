@@ -9,4 +9,4 @@
 
 ## ToDo
 * Authentication
-* Extra information fields depneding on third-party content
+* Extra information fields based on third-party content

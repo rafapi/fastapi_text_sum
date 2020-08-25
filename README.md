@@ -4,6 +4,7 @@
 
 ## Details
 * CI/CD executed via Github Actions
+* Continuous deploiment to Heroku
 * The API is publicly available for test purposdes here: https://desolate-stream-75858.herokuapp.com
 * It's companion mobile app is located here: https://github.com/rafapi/summariser_client
 

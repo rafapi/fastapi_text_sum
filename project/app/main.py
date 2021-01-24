@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from app.api import ping, summaries  # updated
 from app.db import init_db
 
-log = logging.getLogger(__name__)
+log = logging.getLogger("uvicorn")
 
 
 def create_application() -> FastAPI:

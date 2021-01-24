@@ -20,7 +20,9 @@ def test_create_summary(test_app, monkeypatch):
 
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
-    response = test_app.post("/summaries/", data=json.dumps(test_request_payload))
+    response = test_app.post(
+        "/summaries/", data=json.dumps(test_request_payload)
+    )
 
     assert response.status_code == 201
     assert response.json() == test_response_payload
@@ -32,14 +34,16 @@ def test_create_summaries_invalid_json(test_app):
     assert response.json() == {
         "detail": [
             {
-                "loc": ["body", "payload", "url"],
+                "loc": ["body", "url"],
                 "msg": "field required",
                 "type": "value_error.missing",
             }
         ]
     }
 
-    response = test_app.post("/summaries/", data=json.dumps({"url": "invalid://url"}))
+    response = test_app.post(
+        "/summaries/", data=json.dumps({"url": "invalid://url"})
+    )
     assert response.status_code == 422
     assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
 
@@ -150,7 +154,10 @@ def test_update_summary(test_app, monkeypatch):
 
     monkeypatch.setattr(crud, "put", mock_put)
 
-    response = test_app.put("/summaries/1/", data=json.dumps(test_request_payload),)
+    response = test_app.put(
+        "/summaries/1/",
+        data=json.dumps(test_request_payload),
+    )
     assert response.status_code == 200
     assert response.json() == test_response_payload
 
@@ -183,12 +190,12 @@ def test_update_summary(test_app, monkeypatch):
             422,
             [
                 {
-                    "loc": ["body", "payload", "url"],
+                    "loc": ["body", "url"],
                     "msg": "field required",
                     "type": "value_error.missing",
                 },
                 {
-                    "loc": ["body", "payload", "summary"],
+                    "loc": ["body", "summary"],
                     "msg": "field required",
                     "type": "value_error.missing",
                 },
@@ -200,7 +207,7 @@ def test_update_summary(test_app, monkeypatch):
             422,
             [
                 {
-                    "loc": ["body", "payload", "summary"],
+                    "loc": ["body", "summary"],
                     "msg": "field required",
                     "type": "value_error.missing",
                 }
@@ -216,7 +223,9 @@ def test_update_summary_invalid(
 
     monkeypatch.setattr(crud, "put", mock_put)
 
-    response = test_app.put(f"/summaries/{summary_id}/", data=json.dumps(payload))
+    response = test_app.put(
+        f"/summaries/{summary_id}/", data=json.dumps(payload)
+    )
     assert response.status_code == status_code
     assert response.json()["detail"] == detail
 

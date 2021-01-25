@@ -1,12 +1,15 @@
-# Article Summarisation RESTful API using FastAPI 
-
 ![CI/CD](https://github.com/rafapi/fastapi_text_sum/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
 
+# Article Summarisation backend based on FastAPI
+
+### Frontend
+* Repository: https://github.com/rafapi/summariser_client
+
 ## Details
-* CI/CD executed via Github Actions
-* Continuous deploiment to Heroku
-* The API is publicly available for test purposdes here: https://desolate-stream-75858.herokuapp.com
-* It's companion mobile app is located here: https://github.com/rafapi/summariser_client
+* CI/CD via Github Actions
+* Automatic deployment to Heroku
+* Testing: `pytest`
+* Linting: `black` and `isort`
 
 ## ToDo
 * Authentication

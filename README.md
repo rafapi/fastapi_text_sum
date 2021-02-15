@@ -11,8 +11,14 @@
   * Docker: https://docs.docker.com/
 * CI/CD via Github Actions
 * Automatic deployment to Heroku
-* Testing: `pytest`
-* Linting: `black` and `isort`
+* Testing:
+  * pytest: https://docs.pytest.org/en/stable
+  * pytest-cov: https://github.com/pytest-dev/pytest-cov
+  * Codecov: https://docs.codecov.io
+* Linting and Formatting:
+  * black: https://github.com/psf/black
+  * flake8: https://flake8.pycqa.org/en/latest
+  * isort: https://pycqa.github.io/isort
 
 ## ToDo
 * Authentication

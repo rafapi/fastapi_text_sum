@@ -3,7 +3,7 @@
 # Article Summarisation backend based on FastAPI
 
 ### Frontend
-* Repository: https://github.com/rafapi/summariser_client
+* Mobile app: https://github.com/rafapi/summariser_client
 
 ## Details
 * CI/CD via Github Actions

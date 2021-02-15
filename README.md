@@ -6,11 +6,11 @@
 * Mobile app: https://github.com/rafapi/summariser_client
 
 ## Details
+* CI/CD via Github Actions
+* Automatic deployment to Heroku
 * Dev dependencies
   * FastAPI: https://fastapi.tiangolo.com
   * Docker: https://docs.docker.com/
-* CI/CD via Github Actions
-* Automatic deployment to Heroku
 * Testing:
   * pytest: https://docs.pytest.org/en/stable
   * pytest-cov: https://github.com/pytest-dev/pytest-cov

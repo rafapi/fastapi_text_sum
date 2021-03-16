@@ -23,4 +23,4 @@
 ## ToDo
 * Authentication
 * Extra information fields based on third-party content
-* Add plots and images if available from source
+* Add images if available from the original source

@@ -2,6 +2,12 @@
 
 # Article Summarisation backend based on FastAPI
 
+<p align="left">
+     <img src="https://img.shields.io/github/license/rafapi/mvenv">
+     <img src="https://img.shields.io/github/last-commit/rafapi/mvenv">
+     ![CI/CD](https://github.com/rafapi/fastapi_text_sum/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+</p>
+
 ### Frontend
 * Mobile app: https://github.com/rafapi/summariser_client
 

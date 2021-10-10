@@ -3,7 +3,7 @@
 <p align="left">
      <img src="https://img.shields.io/github/license/rafapi/mvenv">
      <img src="https://img.shields.io/github/last-commit/rafapi/mvenv">
-     <img src=https://github.com/rafapi/fastapi_text_sum/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master">
+     <img src="https://github.com/rafapi/fastapi_text_sum/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master">
 </p>
 
 ### Frontend

@@ -14,6 +14,8 @@
 * Automatic deployment to Heroku
 * Dev dependencies
   * FastAPI: https://fastapi.tiangolo.com
+  * Tortoise-ORM: https://tortoise-orm.readthedocs.io/
+  * Newspaper3k: https://newspaper.readthedocs.io/
   * Docker: https://docs.docker.com/
 * Testing:
   * pytest: https://docs.pytest.org/en/stable
